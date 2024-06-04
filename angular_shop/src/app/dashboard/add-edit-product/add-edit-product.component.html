@@ -53,10 +53,10 @@
       <mat-form-field class="input-field">
         <mat-label>Product Type</mat-label>
         <mat-select [formControl]="productType">
-          <mat-option value="SMALL">Small</mat-option>
-          <mat-option value="MEDIUM">Medium</mat-option>
-          <mat-option value="LARGE">Large</mat-option>
-          <mat-option value="NONE">None</mat-option>
+          <mat-option value="PILLS">PILLS</mat-option>
+          <mat-option value="INJECTIONS">INJECTIONS</mat-option>
+          <mat-option value="SYRUP">SYRUP</mat-option>
+          <mat-option value="OTHERS">OTHERS</mat-option>
         </mat-select>
         <mat-error *ngIf="productType.invalid">{{getErrorMessage(productType)}}</mat-error>
       </mat-form-field>

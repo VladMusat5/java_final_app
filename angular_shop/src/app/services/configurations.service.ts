@@ -5,10 +5,10 @@ import { Injectable } from '@angular/core';
 })
 export class ConfigurationsService {
   private apiUrl: string = 'http://localhost:8081/api';
-  private appName: string = 'Shop Online Manager';
-  private appOwner: string = 'JavaRemoteRo66 - SDA';
+  private appName: string = 'Pharmacy';
+  private appOwner: string = 'Musat Vlad';
   private appLogo: string =
-    'https://img.freepik.com/premium-vector/online-shopping-logo-design-template-digital-shopping-logo-mouse-cursor-cart-concepts_502185-286.jpg';
+    'https://m.media-amazon.com/images/I/71Uzvgc-sdL.jpg';
 
   constructor() {}
 
