@@ -28,42 +28,42 @@ public class ProductController {
     public ResponseEntity<ApiResponse> getAllProducts() {
         List<Product> products = this.productService.readAllProducts();
 
-        return ResponseEntity.ok(ApiResponse.success("Lista produse", products));
+        return ResponseEntity.ok(ApiResponse.success("List of products", products));
 
     }
     @GetMapping("/productById/{id}")
     public ResponseEntity<ApiResponse> getProductById(@PathVariable(name = "id") Long id) {
         Optional<Product> productOptional = this.productService.getProductById(id);
 
-        productOptional.orElseThrow(() -> new ResourceNotFoundException("Produsul cu id-ul" + id + " nu a fost gasit"));
+        productOptional.orElseThrow(() -> new ResourceNotFoundException("Product " + id + " not found"));
 
-        return ResponseEntity.ok(ApiResponse.success("Produsul a fost gasit", productOptional.get()));
+        return ResponseEntity.ok(ApiResponse.success("Product found ", productOptional.get()));
 
     }
     @PostMapping("/addProduct")
     public ResponseEntity<ApiResponse> saveProduct(@RequestBody Product product){
         if (product == null) {
-            throw new BadRequestException("Produsul nu este valid");
+            throw new BadRequestException("Product cannot be null");
         }
         Product savedProduct = this.productService.saveProduct(product);
 
-        return  ResponseEntity.ok(ApiResponse.success("Produsul a fost salvat cu succes", savedProduct));
+        return  ResponseEntity.ok(ApiResponse.success("Product saved successfully", savedProduct));
     }
 
     @PutMapping("/updateProduct")
     public ResponseEntity<ApiResponse> updateProduct(@RequestBody Product product){
         if (product == null || product.getId() == null) {
-            throw new BadRequestException("Produsul nu este valid");
+            throw new BadRequestException("Product cannot be null");
         }
         Product updatedProduct = this.productService.updateProduct(product);
 
-        return  ResponseEntity.ok(ApiResponse.success("Produsul a fost salvat cu succes", updatedProduct));
+        return  ResponseEntity.ok(ApiResponse.success("Product saved successfully", updatedProduct));
     }
 
     @DeleteMapping("/deleteProduct/{id}")
     public ResponseEntity<ApiResponse> deleteProductById(@PathVariable(name = "id") Long id) {
         this.productService.deleteProductById(id);
 
-        return ResponseEntity.ok(ApiResponse.success("Produsul a fost sters cu success", null));
+        return ResponseEntity.ok(ApiResponse.success("Product deleted successfully", null));
     }
 }

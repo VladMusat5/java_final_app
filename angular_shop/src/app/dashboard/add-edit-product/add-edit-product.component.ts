@@ -7,6 +7,7 @@ import {ProductService} from "../../services/product.service";
 import {NgIf} from "@angular/common";
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
+import {FooterComponent} from "../../footer/footer.component";
 
 @Component({
   selector: 'app-add-edit-product',
@@ -18,7 +19,8 @@ import {MatSelectModule} from "@angular/material/select";
     MatButtonModule,
     NgIf,
     MatOptionModule,
-    MatSelectModule
+    MatSelectModule,
+    FooterComponent
   ],
   templateUrl: './add-edit-product.component.html',
   styleUrl: './add-edit-product.component.css'

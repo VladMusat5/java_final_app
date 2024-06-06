@@ -10,6 +10,7 @@ import {CartButtonComponent} from "./cart-button/cart-button.component";
 import {CustomerService} from "../services/customer.service";
 import {NgIf} from "@angular/common";
 import {ConfigurationsService} from "../services/configurations.service";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ import {ConfigurationsService} from "../services/configurations.service";
     MatCardModule,
     ListProductsComponent,
     CartButtonComponent,
-    NgIf
+    NgIf,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'

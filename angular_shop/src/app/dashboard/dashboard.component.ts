@@ -12,6 +12,7 @@ import {ListCustomersComponent} from "./list-customers/list-customers.component"
 import {ListOrdersComponent} from "./list-orders/list-orders.component";
 import {ConfigurationsService} from "../services/configurations.service";
 import {TitleCasePipe} from "@angular/common";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-dashboard',
@@ -27,7 +28,8 @@ import {TitleCasePipe} from "@angular/common";
     AddEditCustomerComponent,
     ListCustomersComponent,
     ListOrdersComponent,
-    TitleCasePipe
+    TitleCasePipe,
+    FooterComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'

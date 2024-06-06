@@ -6,6 +6,7 @@ import {MatButtonModule} from "@angular/material/button";
 import {OrderService} from "../services/order.service";
 import {CustomerService} from "../services/customer.service";
 import {Router} from "@angular/router";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-list-products',
@@ -15,7 +16,8 @@ import {Router} from "@angular/router";
     NgForOf,
     MatButtonModule,
     NgIf,
-    TitleCasePipe
+    TitleCasePipe,
+    FooterComponent
   ],
   templateUrl: './list-products.component.html',
   styleUrl: './list-products.component.css'

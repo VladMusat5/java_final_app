@@ -9,6 +9,7 @@ import {AuthService} from "../services/auth.service";
 import {CustomerService} from "../services/customer.service";
 import {Router} from "@angular/router";
 import {ConfigurationsService} from "../services/configurations.service";
+import {FooterComponent} from "../footer/footer.component";
 
 @Component({
   selector: 'app-auth',
@@ -21,7 +22,8 @@ import {ConfigurationsService} from "../services/configurations.service";
     ReactiveFormsModule,
     NgSwitch,
     NgSwitchCase,
-    NgIf
+    NgIf,
+    FooterComponent
   ],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.css'

@@ -11,6 +11,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {ConfigurationsService} from "../../services/configurations.service";
 import {Router} from "@angular/router";
+import {FooterComponent} from "../../footer/footer.component";
 
 @Component({
   selector: 'app-customers-manager',
@@ -25,7 +26,8 @@ import {Router} from "@angular/router";
     MatCardModule,
     MatIconModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FooterComponent
   ],
   templateUrl: './customers-manager.component.html',
   styleUrl: './customers-manager.component.css'

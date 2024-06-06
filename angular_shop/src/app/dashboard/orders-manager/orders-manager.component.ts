@@ -11,22 +11,24 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {ConfigurationsService} from "../../services/configurations.service";
 import {Router} from "@angular/router";
+import {FooterComponent} from "../../footer/footer.component";
 
 @Component({
   selector: 'app-reservation-manager',
   standalone: true,
-    imports: [
-        AddEditCustomerComponent,
-        AddEditProductComponent,
-        ListCustomersComponent,
-        ListOrdersComponent,
-        ListProductsComponent,
-        MatButtonModule,
-        MatCardModule,
-        MatIconModule,
-        MatSidenavModule,
-        MatToolbarModule
-    ],
+  imports: [
+    AddEditCustomerComponent,
+    AddEditProductComponent,
+    ListCustomersComponent,
+    ListOrdersComponent,
+    ListProductsComponent,
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    FooterComponent
+  ],
   templateUrl: './orders-manager.component.html',
   styleUrl: './orders-manager.component.css'
 })
